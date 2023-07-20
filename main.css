@@ -12,8 +12,8 @@ body{
     height: 100vh;
 }
 .sketchBoard{
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     display: grid;
     margin: 20px;
     padding: 10px;
@@ -26,7 +26,7 @@ body{
     color:rgb(107, 96, 30);
     text-transform: capitalize;
     font-weight: bold;
-    padding: 30px;
+    padding: 10px;
 }
 
 .buttons{

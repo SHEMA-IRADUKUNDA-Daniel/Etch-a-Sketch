@@ -1,6 +1,7 @@
 function populateBoard(size){
     let sketchBoard = document.querySelector(".sketchBoard");
-    
+    let squares = sketchBoard.querySelectorAll("div");
+    squares.forEach(div => div.remove());
     sketchBoard.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     sketchBoard.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     sketchBoard.innerHTML = "";
@@ -8,9 +9,7 @@ function populateBoard(size){
     let amount = size * size;
     for (let i = 0; i < amount; i++){
         let square = document.createElement("div");
-        square.addEventListener("mouseover",()=>{
-            square.style.backgroundColor = "black";
-        });
+        square.addEventListener("mouseover",colorSquare);
         square.style.backgroundColor = "white";
         sketchBoard.insertAdjacentElement("beforeend", square);
     }
@@ -18,5 +17,13 @@ function populateBoard(size){
 populateBoard(16);
 
 function changeSize(input){
+    if(input >=2 || input <= 100){
         populateBoard(input);
-};
+    }else{
+        console.log("Maximum size is 100.");
+    }
+    };
+
+    function colorSquare(){
+        this.style.backgroundColor = "black";
+    }
