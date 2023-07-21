@@ -13,6 +13,10 @@
             <h1>Etch a Sketch</h1>
         </div>
         <div class="wrapper">
+            <div class="searchButton">
+                <input class="input" type="text" placeholder="Size of board" value="16" onchange="changeSize(this.value)">
+                <button class="button size">Set size</button>
+            </div>
             <div class="sketchBoard"></div>
             <div class="buttons">
                 <button class="button black" onclick="changeColor('black')">Black</button>
@@ -20,10 +24,7 @@
                 <button class="button eraser" onclick="changeColor('white')">Eraser</button>
                 <button class="button rainbow" onclick="changeColor('rainbow')">Rainbow</button>
                 <button class="button reset" onclick="reset()">Reset</button>
-                <div>
-                    <input class="input" type="text" placeholder="Size of board" value="16"  onchange="changeSize(this.value)">
-                    <button class="button size">Set size</button>
-                </div>
+                
             </div>
         </div>
     </div>

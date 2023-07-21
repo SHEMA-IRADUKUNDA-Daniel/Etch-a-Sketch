@@ -17,12 +17,11 @@ function populateBoard(size){
 };
 populateBoard(16);
 
-
 function changeSize(input){
-    if(input >=2 || input <= 100){
+    if(input <= 100){
         populateBoard(input);
     }else{
-        console.log("Maximum size is 100.");
+        alert("Maximum size is 100.");
     }
     };
 
