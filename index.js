@@ -1,3 +1,4 @@
+let color = "black"
 function populateBoard(size){
     let sketchBoard = document.querySelector(".sketchBoard");
     let squares = sketchBoard.querySelectorAll("div");
@@ -16,6 +17,7 @@ function populateBoard(size){
 };
 populateBoard(16);
 
+
 function changeSize(input){
     if(input >=2 || input <= 100){
         populateBoard(input);
@@ -25,5 +27,17 @@ function changeSize(input){
     };
 
     function colorSquare(){
-        this.style.backgroundColor = "black";
+        if(color === "rainbow"){
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        } else {
+            this.style.backgroundColor = color;
+        }
     }
+
+function changeColor (choice){
+    color = choice;
+}
+
+function reset (){
+    populateBoard(16);
+}

@@ -15,11 +15,11 @@
         <div class="wrapper">
             <div class="sketchBoard"></div>
             <div class="buttons">
-                <button class="button black">Black</button>
-                <button class="button gray">Gray</button>
-                <button class="button eraser">Eraser</button>
-                <button class="button rainbow">Rainbow</button>
-                <button class="button reset">Reset</button>
+                <button class="button black" onclick="changeColor('black')">Black</button>
+                <button class="button gray" onclick="changeColor('gray')">Gray</button>
+                <button class="button eraser" onclick="changeColor('white')">Eraser</button>
+                <button class="button rainbow" onclick="changeColor('rainbow')">Rainbow</button>
+                <button class="button reset" onclick="reset()">Reset</button>
                 <div>
                     <input class="input" type="text" placeholder="Size of board" value="16"  onchange="changeSize(this.value)">
                     <button class="button size">Set size</button>
