@@ -1,4 +1,5 @@
-let color = "black"
+let color = "black";
+let click = true;
 function populateBoard(size){
     let sketchBoard = document.querySelector(".sketchBoard");
     let squares = sketchBoard.querySelectorAll("div");
@@ -25,18 +26,23 @@ function changeSize(input){
     }
     };
 
-    function colorSquare(){
-        if(color === "rainbow"){
-            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        } else {
-            this.style.backgroundColor = color;
-        }
-    }
-
+        function colorSquare(){
+            if (click){
+                if(color === "rainbow"){
+                    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                } else {
+                    this.style.backgroundColor = color;
+                }
+            }
+        };
 function changeColor (choice){
     color = choice;
-}
+};
 
 function reset (){
     populateBoard(16);
-}
+};
+
+// document.querySelector("body").addEventListener("click",()=>{
+//     click = !click;
+// });

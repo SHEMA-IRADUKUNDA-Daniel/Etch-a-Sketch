@@ -14,8 +14,9 @@ body{
     width: 400px;
     display: grid;
     margin: 20px;
-    padding: 10px;
+    /* padding: 10px; */
     margin: auto;
+    box-shadow: 5px 5px 5px #0f1d25;
 }
 .title{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -27,7 +28,7 @@ body{
 .searchButton{
     display: flex;
     justify-content: center;
-    
+    padding: 10px;
 }
 .buttons{
     display: flex;
