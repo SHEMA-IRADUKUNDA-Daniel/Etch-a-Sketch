@@ -1,5 +1,5 @@
 let color = "black";
-let click = true;
+let click = false;
 function populateBoard(size){
     let sketchBoard = document.querySelector(".sketchBoard");
     let squares = sketchBoard.querySelectorAll("div");
@@ -11,7 +11,7 @@ function populateBoard(size){
     let amount = size * size;
     for (let i = 0; i < amount; i++){
         let square = document.createElement("div");
-        square.addEventListener("mouseover",colorSquare);
+        square.addEventListener("mousemove",colorSquare);
         square.style.backgroundColor = "white";
         sketchBoard.insertAdjacentElement("beforeend", square);
     }
@@ -43,6 +43,9 @@ function reset (){
     populateBoard(16);
 };
 
-// document.querySelector("body").addEventListener("click",()=>{
-//     click = !click;
-// });
+document.querySelector(".sketchBoard").addEventListener('mousedown',()=>{
+    click = true;
+});
+document.querySelector(".sketchBoard").addEventListener('mouseup',()=>{
+    click = false;
+});
